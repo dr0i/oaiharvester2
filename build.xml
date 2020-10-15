@@ -103,7 +103,7 @@
 
   <property name="app.name"      value="harvester2"/>
   <property name="app.path"      value="/${app.name}"/>
-  <property name="appp.version"   value="0.1.14"/>
+  <property name="appp.version"   value="0.1.16"/>
   <property name="build.home"    value="${basedir}/build"/>
 	<!--
   <property name="catalina.home" value="../../../.."/> 
@@ -416,10 +416,10 @@
     </copy>
 
     <!-- Create application JAR file -->
-<!--
     <jar jarfile="${dist.home}/${app.name}.jar"
-         basedir="${build.home}/classes"/>
--->
+         basedir="${build.home}/classes" >
+    <fileset dir="${src.home}" includes="**/*.java"/>
+		</jar>
 
     <!-- Copy additional files to ${dist.home} as necessary -->
 

@@ -115,6 +115,7 @@ public class RawWrite {
         out.write(new ListMetadataFormats(baseURL).toString().getBytes("UTF-8"));
         out.write("\n".getBytes("UTF-8"));
         ListSets listSets = new ListSets(baseURL);
+				System.out.println("######### ?xml version=\"1.0 pchbz");
         while (listSets != null) {
             out.write(listSets.toString().getBytes("UTF-8"));
             out.write("\n".getBytes("UTF-8"));
